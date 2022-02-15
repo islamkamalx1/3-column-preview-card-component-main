@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray: hsl(0, 0%, 95%);
+}
+body{
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Big Shoulders Display', cursive;
+}
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        width: 1120px;
+    }
+}
+.main{
+    padding: 30px 30px 10px 30px;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    overflow: hidden;
+    border-radius: 10px;
+    margin: auto;
+}
+.box{
+    padding: 40px 0px 50px 60px;
+}
+.box .image{
+    margin-bottom: 20px;
+}
+.box h2{
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: var(--Very-light-gray);
+}
+.box p{
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--Transparent-white);
+    margin-top: 30px;
+    margin-bottom: 100px;
+    max-width: 200px;
+    line-height: 1.6;
+}
+@media (max-width: 767px) {
+    .box p{
+        margin-bottom: 20px;
+        max-width: 225px;
+    }
+}
+.box button{
+    border: 2px solid var(--Very-light-gray);
+    background-color: var(--Very-light-gray);
+    cursor: pointer;
+    padding: 15px 30px;
+    font-weight: bold;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+.box.sedans button{
+    color: var(--Bright-orange);
+}
+.box.suvs button{
+    color: var(--Dark-cyan);
+}
+.box.luxury button{
+    color: var(--Very-dark-cyan);
+}
+.box button:hover{
+    background-color: transparent;
+    border-color: var(--Very-light-gray);
+    color: white;
+}
+.box.sedans{
+    background-color: var(--Bright-orange);
+}
+.box.suvs{
+    background-color: var(--Dark-cyan);
+}
+.box.luxury{
+    background-color: var(--Very-dark-cyan);
+}
+
